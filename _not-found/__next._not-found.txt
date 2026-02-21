@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[40171,["/grascam/_next/static/chunks/e4b6f040a0e17405.js"],"default"]
+3:I[63103,["/grascam/_next/static/chunks/e4b6f040a0e17405.js"],"default"]
+0:{"buildId":"FQEIBk_RljQuL_D86vNFH","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
