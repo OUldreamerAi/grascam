@@ -42,6 +42,7 @@ function WindowShell({ id, title, zIndex, onClose, onFocus, children }: WindowSh
 
     function onDrag(e: MouseEvent) {
       e.preventDefault();
+      if (!windowElement) return;
 
       const moveX = e.clientX - lastMouseX;
       const moveY = e.clientY - lastMouseY;
