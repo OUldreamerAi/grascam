@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{overflow: "hidden", height: "100%"}}>
-<body className={`${geistSans.variable} ${geistMono.variable} ${myFont.variable}  antialiased`} style={{overflow: "hidden", height: "100%;"}}>
+<body className={`${geistSans.variable} ${geistMono.variable} ${myFont.variable}  antialiased`} style={{overflow: "hidden", height: "100%"}}>
         {children}
       </body>
     </html>
