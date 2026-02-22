@@ -5,7 +5,7 @@ import { notes, setNotes } from "@/lib/state";
 export default function NotebookContent() {
   const [text, setText] = useState(notes);
 
-  function handleChange(e: React.ChangeEventz<HTMLTextAreaElement>) {
+function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setNotes(e.target.value);
     setText(e.target.value);
   }
