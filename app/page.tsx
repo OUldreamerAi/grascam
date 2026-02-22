@@ -9,6 +9,7 @@ import BrowserContent from "@/apps/BrowserContent";
 import EmailContent from "@/apps/EmailContent";
 import MessagesContent from "@/apps/MessagesContent";
 import CalenderContent from "@/components/CalenderContent";
+import BankContent from "@/apps/BankContent";
 
 let nextWindowId = 0;
 let highestZIndex = 1;
@@ -21,6 +22,7 @@ const APP_REGISTRY: Record<AppType, { title: string; Content: () => React.ReactN
   email:      { title: "Email",      Content: EmailContent },
   messages:   { title: "Messages",   Content: MessagesContent },
   calender:   { title: "Calender",   Content: CalenderContent },
+  bank:       { title: "Bank",       Content: BankContent },
 };
 
 export default function Home() {
@@ -58,7 +60,6 @@ export default function Home() {
     <main className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/desktopbackground.png')" }}>
 
-      {/* Taskbar */}
       <div className="flex justify-between relative z-[9999] text-black pointer-events-none items-center"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.48)" }}>
         <button className="m-2 text-5xl pointer-events-auto" onClick={() => openApp("welcome")}>
@@ -67,23 +68,21 @@ export default function Home() {
         <p className="m-2 text-3xl">{currentTime}</p>
       </div>
 
-      {/* Desktop icons */}
       <div style={{ paddingTop: "32px", paddingLeft: "32px", display: "flex", alignItems: "flex-end", justifyContent: "center", height: "90vh" }}>
-        <img src="/notebooklogo.png"   style={{ width: "90px",  cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("notebook")}   alt="Notebook" />
+        <img src="/notebooklogo.png" style={{ width: "90px",  cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("notebook")}   alt="Notebook" />
         <img src="/calculatorlogo.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("calculator")} alt="Calculator" />
-        <img src="/browser.png"        style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("browser")}    alt="Browser" />
-        <img src="/emaillogo.png"      style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("email")}      alt="Email" />
-        <img src="/messages.png"       style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("messages")}   alt="Messages" />
+        <img src="/browser.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("browser")}    alt="Browser" />
+        <img src="/emaillogo.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("email")}      alt="Email" />
+        <img src="/messages.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("messages")}   alt="Messages" />
+        <img src="/bank.png" style={{ width: "120px", height: "100px", objectFit: "cover", objectPosition: "0% 30%",cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("bank")}   alt="Bank" />
       </div>
 
-      {/* Calendar widget */}
       <div style={{ position: "absolute", top: "120px", left: "50px", width: "500px", height: "325px", overflow: "hidden", zIndex: 1, border: "2px solid black" }}>
         <div style={{ marginTop: "-18px", marginLeft: "-26px", width: "560px" }}>
           <CalenderContent />
         </div>
       </div>
 
-      {/* Motivational quotes */}
       <div style={{ position: "absolute", right: "120px", top: "400px", width: "500px", zIndex: 1 }}
         className="flex flex-col place-items-center">
         <h1 className="text-5xl">Motivational quotes</h1>
@@ -92,7 +91,7 @@ export default function Home() {
         <li className="text-3xl">You don't have to see the whole staircase, just take the first step.</li>
       </div>
 
-      {/* Open windows */}
+
       {openWindows.map((openWindow) => {
         const { title, Content } = APP_REGISTRY[openWindow.type];
         return (
