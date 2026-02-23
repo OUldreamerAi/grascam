@@ -1,12 +1,92 @@
 "use client";
 import { useState } from "react";
 import { money, setMoney, purchasedBackgrounds, purchaseBackground, setActiveBackground } from "@/lib/state";
+import { url } from "inspector";
 
 const SHOP_ITEMS = [
   { id: "bg1", name: "gun( just joking)",  price: 50,  file: "/bg_space.png" },
   { id: "bg2", name: "blahjah",   price: 100, file: "/bg_city.png" },
   { id: "bg3", name: "framework 16", price: 150, file: "/bg_forest.png" },
 ];
+
+
+interface Tab {
+  id: number;
+  url: string;      
+  currentSite: string;
+}
+
+function getSite(url: string) {
+  if (url.includes("shop.scam")) return "shop";
+  if (url.includes("recognisethespecies")) return "species";
+  if (url.includes("scamschool.com")) return "scamschool";
+  if (url.includes("search")) return "search";
+  return "404";
+}
+
+function TabBar({ tabs, activeId, onSelect, onClose }: {
+  tabs: Tab[];
+  activeId: number;
+  onSelect: (id: number) => void;
+  onClose: (id: number) => void;
+}) {
+  return (
+    <div className="flex bg-gray-200 border-b overflow-x-auto shrink-0">
+      {tabs.map((tab) => (
+        <div
+          key={tab.id}
+          onClick={() => onSelect(tab.id)}
+          className={`flex items-center gap-1 px-3 py-2 cursor-pointer text-sm border-r min-w-0 max-w-[180px] select-none
+            ${tab.id === activeId ? "bg-white text-black" : "bg-gray-200 text-gray-500 hover:bg-gray-100"}`}
+        >
+          <span className="truncate flex-1 text-xs">{tab.url}</span>
+          {tabs.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onClose(tab.id); }}
+              className="text-gray-400 hover:text-black text-base leading-none ml-1"
+            >
+              ×
+            </button>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Species() {
+  const species = [
+    { name: "kuusi", image: "image1.jpg" },
+    { name: "rauduskoivu", image: "image2.jpg" },
+    { name: "puolukka", image: "image3.jpg" },
+  ];
+
+  const [revealed, setRevealed] = useState([false, false, false]);
+
+  const toggle = (i: number) => {
+    setRevealed(revealed.map((v, idx) => (idx === i ? !v : v)));
+  };
+
+  return (
+    <div className="text-black p-2 m-2">
+      <h2 className="text-5xl">Recognise the species</h2>
+      <div style={{ display: "flex", gap: "20px" }}>
+        {species.map((s, i) => (
+          <div key={s.name} style={{ textAlign: "center" }}>
+            <img src={"media/" + s.image} alt="species"  style={{ width: 200, height: 160, objectFit: "cover" }} />
+            <div>
+              {revealed[i] ? (
+                <span>{s.name}</span>
+              ) : (
+                <button onClick={() => toggle(i)}>Reveal name</button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function ScamSchool() {
   const [lesson, setLesson] = useState(0);
@@ -60,7 +140,7 @@ How to do it?:
 `,
     },
     {
-      title: "kjdhfkhekufhaskeuhfkjwgef",
+      title: "Lesson 4: Catfishing",
       content: `hgjfshjgfjhgswehjkfgj.
 
 jgjgwjehfgjwygefjyg"`,
@@ -158,48 +238,140 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
   );
 }
 
+function ComboBox({ options, value, onChange }: { options: { label: string; value: string }[]; value: string; onChange: (value: string) => void }) {
+  const [open, setOpen] = useState(false);
+
+  const filtered = options.filter((opt) =>
+    opt.label.toLowerCase().includes(value.toLowerCase())
+  );
+
+  return (
+    <div style={{ position: "relative", flex: 1 }}>
+      <input
+        type="text"
+        value={value}
+        placeholder="enter or pick a url..."
+        onFocus={() => setOpen(true)}
+        onBlur={() => setTimeout(() => setOpen(false), 100)}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter") setOpen(false); }}//MAke enter work
+        style={{ width: "100%", height: "30px", border: "1px solid #556", borderRadius: "4px", padding: "0 8px", color: "black", fontSize: "14px", boxSizing: "border-box" }}
+      />
+
+      {open && filtered.length > 0 && (
+        <div style={{ position: "absolute", top: "32px", left: 0, right: 0, background: "white", border: "1px solid #556", borderRadius: "4px", zIndex: 999, boxShadow: "0 2px 6px rgba(0,0,0,0.15)" }}>
+          {filtered.map((opt) => (
+            <div
+              key={opt.value}
+              onMouseDown={() => { onChange(opt.value); setOpen(false); }}
+              style={{ padding: "6px 10px", cursor: "pointer", color: "black", fontSize: "13px" }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#f0f0f0")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "white")}
+            >
+              {opt.label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function BrowserContent() {
-  const [url, setUrl] = useState("scamschool.com");
-  const [currentSite, setCurrentSite] = useState("scamschool");
+  const [tabs, setTabs] = useState<Tab[]>([
+    { id: 1, url: "search", currentSite: "search" },
+  ]);
+  const [activeId, setActiveId] = useState(1);
+  const [nextId, setNextId] = useState(2);
+
+  const [inputUrl, setInputUrl] = useState("");
   const [balance, setBalance] = useState(money);
 
-  function navigate() {
-    if (url.includes("shop")) setCurrentSite("shop");
-    else if (url.includes("scamschool")) setCurrentSite("scamschool");
-    else setCurrentSite("404");
+  const activeTab = tabs.find((t) => t.id === activeId)!;
+
+  function selectTab(id: number) {
+    setActiveId(id);
+    const tab = tabs.find((t) => t.id === id)!;
+    setInputUrl(tab.url);
+  }
+
+  function closeTab(id: number) {
+    const newTabs = tabs.filter((t) => t.id !== id);
+    setTabs(newTabs);
+    if (activeId === id) {
+      const fallback = newTabs[newTabs.length - 1];
+      setActiveId(fallback.id);
+      setInputUrl(fallback.url);
+    }
+  }
+
+  const siteOptions = [
+    { label: "scamschool.com", value: "scamschool.com" },
+    { label: "shop.scam", value: "shop.scam" },
+    { label: "recognisethespecies.com", value: "recognisethespecies.com" },
+  ];
+
+  function navigate(target = inputUrl) {
+    const site = getSite(target);
+
+    if (target === activeTab.url) {
+
+      setTabs((prev) =>
+        prev.map((t) => (t.id === activeId ? { ...t, currentSite: site } : t))
+      );
+    }
+
+    const newTab: Tab = { id: nextId, url: target, currentSite: site };
+    setTabs((prev) => [...prev, newTab]);
+    setActiveId(nextId);
+    setInputUrl(target);
+    setNextId((n) => n + 1);
+  }
+
+  function handleUrlChange(value: string) {
+    setInputUrl(value);
+    if (siteOptions.some((opt) => opt.value === value)) navigate(value);
   }
 
   return (
     <div className="flex flex-col" style={{ height: "550px" }}>
+      <TabBar
+        tabs={tabs}
+        activeId={activeId}
+        onSelect={selectTab}
+        onClose={closeTab}
+      />
 
-      {/* URL bar */}
-      <div className="flex gap-2 p-2 bg-gray-100 border-b">
-        <input
-          className="flex-1 border border-gray-300 rounded px-2 py-1 text-sm text-black"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && navigate()}
+      <div className="flex gap-2 p-2 bg-gray-100 border-b items-center">
+        <ComboBox
+          options={siteOptions}
+          value={inputUrl}
+          onChange={handleUrlChange}
         />
-        <button onClick={navigate} className="bg-blue-500 text-white px-3 py-1 rounded text-sm">Go</button>
-      </div>
-
-      {/* change this to drop down */}
-      <div className="flex gap-2 px-2 py-1 bg-gray-50 border-b text-xs">
-        <button onClick={() => { setUrl("scamschool.com"); setCurrentSite("scamschool"); }} className="text-blue-600 hover:underline"> ScamSchool</button>
-        <button onClick={() => { setUrl("shop.scam"); setCurrentSite("shop"); }} className="text-blue-600 hover:underline"> Shop</button>
+        <button
+          onClick={() => navigate()}
+          className="bg-blue-500 px-3 py-1 rounded text-sm"
+        >
+          Go
+        </button>
       </div>
 
       <div className="flex-1 overflow-y-auto bg-white">
-        {currentSite === "scamschool" && <ScamSchool />}
-        {currentSite === "shop" && <Shop balance={balance} setBalance={setBalance} />}
-        {currentSite === "404" && (
+        {activeTab.currentSite === "scamschool" && <ScamSchool />}
+        {activeTab.currentSite === "species" && <Species />}
+        {activeTab.currentSite === "shop" && (
+          <Shop balance={balance} setBalance={setBalance} />
+        )}
+        {activeTab.currentSite === "404" && (
           <div className="p-8 text-center text-gray-400">
-            <p className="text-4xl mb-2">404</p>
-            <p className="text-sm">Site not found. Try{" "}
-              <span className="text-blue-500 cursor-pointer" onClick={() => { setUrl("scamschool.com"); setCurrentSite("scamschool"); }}>scamschool.com</span>
-              {" "}or{" "}
-              <span className="text-blue-500 cursor-pointer" onClick={() => { setUrl("shop.scam"); setCurrentSite("shop"); }}>shop.scam</span>
-            </p>
+            <p className="text-8xl mb-2">404</p>
+            <p className="text-2xl mb-2">page not found</p>
+          </div>
+        )}
+        {activeTab.currentSite === "search" && (
+          <div className="p-8 text-center text-black">
+            <p className="text-8xl mb-2">Search</p>
+            <p className="text-2xl mb-2">All the information of the world in your fingertips. Use it for good or bad we dont care. </p>
           </div>
         )}
       </div>
