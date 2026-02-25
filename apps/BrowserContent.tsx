@@ -77,7 +77,7 @@ function Chemi() {
       namingTitle: "Miten nimetä hiilivety-yhdisteet hiiliatomien määrän mukaan:",
       naming: [
         "meta = yksi", "eta = kaksi", "propa = kolme", "buta = neljä",
-        "penta = viisi", "cheskta = kuusi", "hepta = seitsemän", "okta = kahdeksan",
+        "penta = viisi", "heksa = kuusi", "hepta = seitsemän", "okta = kahdeksan",
         "nona = yhdeksän", "deka = kymmenene", "undeka = yksitosita",
       ],
       cycloTitle: `Jos hiiliatmoit muodostavat ympyrän yhdisteen alkuun lisätään "syklo" ja syklon jälkeen kuinka monta samaa sidostyyppiä on siis kuinka monta kaksois tai kolmois sidosta on yhdisteessä. Jos vain yksi niin mitään ei listä, jos 2 niin ""`,
@@ -339,7 +339,7 @@ function ComboBox({ options, value, onChange }: {
 }
 
 
-export default function BrowserContent() {
+export default function BrowserContent({ hideTabBar = false }: { hideTabBar?: boolean }) {
   const [tabs, setTabs] = useState<Tab[]>([
     { id: 1, url: "search", currentSite: "search", instanceKey: 0 },
   ]);
@@ -405,12 +405,14 @@ function closeTab(id: number) {
 
   return (
     <div className="flex flex-col" style={{ height: "550px" }}>
-      <TabBar
-        tabs={tabs}
-        activeId={activeId}
-        onSelect={selectTab}
-        onClose={closeTab}
-      />
+      {!hideTabBar && (
+        <TabBar
+          tabs={tabs}
+          activeId={activeId}
+          onSelect={selectTab}
+          onClose={closeTab}
+        />
+      )}
       <div className="flex gap-2 p-2 bg-gray-100 border-b items-center">
         <button
           onClick={refresh}

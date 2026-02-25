@@ -5,7 +5,6 @@ import { money } from "@/lib/state";
 export default function BankContent() {
   const [balance, setBalance] = useState(money);
 
-  // Refresh balance whenever window is opened
   useEffect(() => {
     setBalance(money);
   }, []);
