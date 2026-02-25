@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
 
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,6 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en" style={{overflow: "hidden", height: "100%"}}>
 <body className={`${geistSans.variable} ${geistMono.variable} ${myFont.variable}  antialiased`} style={{overflow: "hidden", height: "100%"}}>
         {children}

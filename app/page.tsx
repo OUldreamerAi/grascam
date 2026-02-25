@@ -28,15 +28,22 @@ const APP_REGISTRY: Record<AppType, { title: string; Content: () => React.ReactN
 export default function Home() {
   const [currentTime, setCurrentTime] = useState("");
   const [openWindows, setOpenWindows] = useState<WindowInstance[]>([]);
+  const [showSplash, setShowSplash] = useState(true);
 
-  useEffect(() => {
-    function updateClock() {
-      setCurrentTime(new Date().toLocaleString());
+useEffect(() => {
+  function handleFullscreenChange() {
+    if (!document.fullscreenElement) {
+      setShowSplash(true);
     }
-    updateClock();
-    const interval = setInterval(updateClock, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  }
+  document.addEventListener("fullscreenchange", handleFullscreenChange);
+  return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+}, []);
+
+  function handleSplashClick() {
+    document.documentElement.requestFullscreen().catch(() => {});
+    setShowSplash(false);
+  }
 
   function openApp(type: AppType) {
     setOpenWindows((prev) => [...prev, {
@@ -56,8 +63,32 @@ export default function Home() {
     ));
   }
 
+  if (showSplash) {
+    return (
+      <div
+        onClick={handleSplashClick}
+        style={{
+          width: "100vw",
+          height: "100vh",
+          backgroundImage: "url('/desktopbackground.png')",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          color: "white",
+          userSelect: "none",
+        }}
+      >
+        <h1 style={{ fontSize: "6rem", marginBottom: "1rem" }}>Welcome to</h1>
+        <img className="w-1/2 m-8 p-8  " src="/scamlogo3.png" alt="logo" />
+        <p className="text-white text-2xl">Click anywhere to start</p>
+      </div>
+    );
+  }
+
   return (
-    <main className="min-h-screen bg-cover bg-center bg-no-repeat"
+    <main className="h-screen w-screen overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/desktopbackground.png')" }}>
 
       <div className="flex justify-between relative z-[9999] text-black pointer-events-none items-center"
@@ -68,13 +99,13 @@ export default function Home() {
         <p className="m-2 text-3xl">{currentTime}</p>
       </div>
 
-      <div style={{ paddingTop: "32px", paddingLeft: "32px", display: "flex", alignItems: "flex-end", justifyContent: "center", height: "90vh" }}>
+      <div style={{ paddingTop: "32px", paddingLeft: "32px", display: "flex", alignItems: "flex-end", justifyContent: "center", height: "calc(100vh - 80px)" }}>
         <img src="/notebooklogo.png" style={{ width: "90px",  cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("notebook")}   alt="Notebook" />
         <img src="/calculatorlogo.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("calculator")} alt="Calculator" />
         <img src="/browser.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("browser")}    alt="Browser" />
         <img src="/emaillogo.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("email")}      alt="Email" />
         <img src="/messages.png" style={{ width: "120px", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("messages")}   alt="Messages" />
-        <img src="/bank.png" style={{ width: "120px", height: "100px", objectFit: "cover", objectPosition: "0% 30%",cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("bank")}   alt="Bank" />
+        <img src="/bank.png" style={{ width: "120px", height: "100px", objectFit: "cover", objectPosition: "0% 30%", cursor: "pointer", paddingTop: "16px", paddingRight: "16px" }} onClick={() => openApp("bank")} alt="Bank" />
       </div>
 
       <div style={{ position: "absolute", top: "120px", left: "50px", width: "500px", height: "325px", overflow: "hidden", zIndex: 1, border: "2px solid black" }}>
@@ -90,7 +121,6 @@ export default function Home() {
         <li className="text-3xl">We can't become what we need to be by remaining what we are.</li>
         <li className="text-3xl">You don't have to see the whole staircase, just take the first step.</li>
       </div>
-
 
       {openWindows.map((openWindow) => {
         const { title, Content } = APP_REGISTRY[openWindow.type];
