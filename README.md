@@ -2,7 +2,9 @@
 
 ![alt text](https://github.com/OUldreamerAi/grascam/blob/main/public/scamlogo2.png)
 
-## For rewiers
+# For rewiers
+###The get to the part where you try to scam the Ais. Go to messages talk with frend and download the scambot he sends you. The go to email. Send a hook email and try to scam the people who responds
+
 Clicking The ScamOs text in the corner opens a window of wich bottom there is a button which gives you a million money to test the the shop and end scene without playing for hours. Also if you have the the browser open when adding money you need to reopen the browser to be able to spend that money in the shop. 
 
 ## What do I do?
