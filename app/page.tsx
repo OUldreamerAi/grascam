@@ -23,16 +23,16 @@ const BG_FILES: Record<string, string> = {
   bg1: "/bgimage2.png",
   bg2: "/bgimage.png",
   bg3: "/bgimage3.png",
-  bg4: "/drawing.png",   // new
-  bg5: "/bgimage4.png",  // new
+  bg4: "/bgimage5.png",   
+  bg5: "/bgimage4.png", 
 };
 
 const BG_NAMES: Record<string, string> = {
   bg1: "Black but it has red",
   bg2: "Black",
-  bg3: "Foresty vibes",
-  bg4: "Drawing",        // new
-  bg5: "New Background", // new
+  bg3: "Sunny forest vibes",
+  bg4: "Mountains",      
+  bg5: "The sun", 
 };
  
 interface WindowInstance {

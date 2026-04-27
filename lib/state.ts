@@ -1,7 +1,7 @@
 
 //state.ts
 export let notes = "";
-export let money = 160000;
+export let money = 16;
 export let savedChatState: Record<string, { messages: {from: string, text: string}[], currentNode: string }> = {};
 export let savedSelected: string | null = null;
 export let unlockedEmailTargets: string[] = [];

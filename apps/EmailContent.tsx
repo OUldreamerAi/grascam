@@ -249,7 +249,7 @@ function pickVictims(tier: 1 | 2 | 3, hookEmail: string): Victim[] {
 
 function generateSnippet(difficulty: Difficulty, hook: string): string {
   const easySnippets = [
-    `Hello! I got your email about ${hook.slice(0, 30)}... how exciting! Could you tell me a bit more?`,
+    `Hello! I got your email starting with... ${hook.slice(0, 30)}... how exciting! Could you tell me a bit more?`,
     `Oh my, I received your message. This sounds interesting what do I need to do?`,
     `Hello dear, I saw your email. I am quite curious, could you explain further?`,
   ];

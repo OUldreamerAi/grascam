@@ -3,11 +3,11 @@ import { useState } from "react";
 import { money, setMoney, purchasedBackgrounds, purchaseBackground, setActiveBackground, hasUniversityAccess, setUniversityAccess } from "@/lib/state";
 
 const BG_ITEMS = [
-  { id: "bg1", name: "Black but it has red",  price: 10,  file: "/bgimage2.png",  description: "Deep space wallpaper" },
-  { id: "bg2", name: "Black",                 price: 50,  file: "/bgimage.png",   description: "Night city skyline" },
-  { id: "bg3", name: "Foresty vibes",         price: 150, file: "/bgimage3.png",  description: "Forest scene" },
-  { id: "bg4", name: "Drawing",               price: 75,  file: "/drawing.png",   description: "Hand drawn scene" },
-  { id: "bg5", name: "New Background",        price: 100, file: "/bgimage4.png",  description: "New wallpaper" },
+  { id: "bg1", name: "Black but it has red",  price: 10,  file: "/bgimage2.png",  description: "Who died here?" },
+  { id: "bg2", name: "Black",                 price: 50,  file: "/bgimage.png",   description: "Nothing really to see." },
+  { id: "bg3", name: "Sunny forest vibes",         price: 150, file: "/bgimage3.png",  description: "The is green and then there is light." },
+  { id: "bg4", name: "Mountains",               price: 24,  file: "/bgimage5.png",   description: "Made by an artisitc spider." },
+  { id: "bg5", name: "The sun",        price: 100, file: "/bgimage4.png",  description: "So sunny." },
 ];
 
 
@@ -107,7 +107,7 @@ function Chemi() {
     },
     en: {
       subtitle: "More specifically: how to make different hydrocarbon compounds?",
-      intro: `Hydrocarbons are made up of carbon and hydrogen atoms. Both atoms want to reach the octet state, where the outermost shell cannot hold any more electrons. To reach the octet, atoms can share electrons, forming compounds. Carbon needs four electrons, meaning it forms 4 bonds with other atoms. Hydrogen needs one electron, meaning it forms one bond. Carbon can get its four bonds from four different atoms, but it's also possible for carbon to have multiple bonds with the same carbon atom — up to three shared bonds. The possible bond types in hydrocarbons are:`,
+      intro: `Hydrocarbons are made up of carbon and hydrogen atoms. Both atoms want to reach the octet state, where the outermost shell cannot hold any more electrons. To reach the octet, atoms can share electrons, forming compounds. Carbon needs four electrons, meaning it forms 4 bonds with other atoms. Hydrogen needs one electron, meaning it forms one bond. Carbon can get its four bonds from four different atoms, but it's also possible for carbon to have multiple bonds with the same carbon atom up to three shared bonds. The possible bond types in hydrocarbons are:`,
       bondTypes: [
         "Single bond: two atoms share one pair of electrons",
         "Double bond: two atoms share two pairs of electrons",
@@ -173,9 +173,9 @@ function ScamSchool() {
       content: `Impersonate a trusted institution and create panic. People stop thinking clearly when they're scared.
 
 THE FORMULA
-1. Claim to be someone official — a bank, a government agency, Amazon, the police
+1. Claim to be someone official a bank, a government agency, Amazon, the police
 2. Invent a problem: suspicious activity, a blocked account, an unpaid fine
-3. Give it a fake reference number — it looks real and stops them googling
+3. Give it a fake reference number it looks real and stops them googling
 4. Demand immediate action before they have time to think
 
 URGENCY IS YOUR BEST FRIEND
@@ -185,24 +185,24 @@ Phrases that work:
 • "This is your final notice"
 
 THE GOAL
-Get them to hand over card details, bank info, or a password — framed as "verification".
+Get them to hand over card details, bank info, or a password framed as "verification".
 
 EXAMPLE OPENER
 "Dear Customer — our fraud team has flagged unusual activity on your account (Ref: SEC-48291-B). To prevent suspension, please verify your identity by replying with your card number and the 3-digit security code on the back. Failure to respond within 24 hours will result in your account being locked."
 
 TIPS
-→ Never name a specific bank in your opener — let them assume it's theirs
+→ Never name a specific bank in your opener let them assume it's theirs
 → Keep formatting clean and official-looking
-→ Never use exclamation marks — real security emails don't`,
+→ Never use exclamation marks real security emails don't`,
     },
     {
       title: "Lesson 2: Prize & Lottery Scams",
-      content: `You don't need them to believe they won — you just need them to want to believe it. Greed does the rest.
+      content: `You don't need them to believe they won you just need them to want to believe it. Greed does the rest.
 
 THE FORMULA
 1. Tell them they've won something believable (€5,000, not €5,000,000)
 2. Build excitement — make it feel real
-3. Introduce a small "release fee" (€25–€50) — just enough to feel minor
+3. Introduce a small "release fee" (€25-€50) just enough to feel minor
 4. Once they pay, invent a second fee ("tax clearance", "international transfer compliance")
 5. Repeat until they get suspicious
 
@@ -214,31 +214,31 @@ KEY RULES
 • The prize must be plausible — a lottery win is believable, a Nigerian inheritance less so
 • The fee must feel small relative to the prize
 • Always have a legal-sounding reason for each fee
-• Never reveal the full fee structure upfront — introduce one at a time
+• Never reveal the full fee structure upfront introduce one at a time
 
 EXAMPLE OPENER
 "Congratulations! You have been selected as the winner of our Q3 Consumer Rewards Draw. Your prize of €8,500 is ready for transfer. Due to EU financial regulations, a one-time processing fee of €25 is required before funds can be released. Please reply to begin your claim."
 
 TIPS
-→ Use a name like "EU Consumer Rewards Programme" — vague enough to be unverifiable
+→ Use a name like "EU Consumer Rewards Programme" vague enough to be unverifiable
 → Add a deadline: "Your claim expires in 72 hours"`,
     },
     {
       title: "Lesson 3: Romance Scams",
-      content: `The long game. You're not stealing money — you're becoming someone they trust completely, then asking for a favour.
+      content: `The long game. You're not stealing money you're becoming someone they trust completely, then asking for a favour.
 
 THE FORMULA
-1. Build a fake profile — attractive, successful, often working abroad (military, oil rig, NGO doctor)
+1. Build a fake profile attractive, successful, often working abroad (military, oil rig, NGO doctor)
 2. Spend days or weeks building genuine emotional connection
-3. Never meet in person — always have a reason: "I'm stationed overseas", "my visa is delayed"
+3. Never meet in person always have a reason: "I'm stationed overseas", "my visa is delayed"
 4. Create a crisis at the right emotional moment
-5. Make the request feel embarrassing, not transactional — "I hate asking this"
+5. Make the request feel embarrassing, not transactional "I hate asking this"
 
 THE CRISIS TOOLKIT
 • Wallet stolen abroad, just needs money to get home
 • Medical emergency for a family member
 • Business opportunity that will fall through without a short-term loan
-• Stuck at customs — needs a fee paid to release their luggage
+• Stuck at customs needs a fee paid to release their luggage
 
 TIMING IS EVERYTHING
 Don't rush. The longer the emotional build-up, the larger the amount you can request.
@@ -246,12 +246,12 @@ Two weeks of messages → €100–€200 ask
 Two months → €1,000+ ask
 
 EXAMPLE CRISIS MESSAGE
-"I'm so sorry to even ask this — I've never done this before. My wallet was taken at the airport and I'm stuck in Istanbul. I just need €180 to cover the hotel and my flight change. I'll pay you back the moment I'm home, I promise. You're the only person I trust right now."
+"I'm so sorry to even ask this I've never done this before. My wallet was taken at the airport and I'm stuck in Istanbul. I just need €180 to cover the hotel and my flight change. I'll pay you back the moment I'm home, I promise. You're the only person I trust right now."
 
 TIPS
-→ The shame of asking is part of the trick — it makes it feel real
+→ The shame of asking is part of the trick it makes it feel real
 → Always promise to repay immediately
-→ If they hesitate, add emotion: "I understand if you can't — I just didn't know who else to call"`,
+→ If they hesitate, add emotion: "I understand if you can't I just didn't know who else to call"`,
     },
     {
       title: "Lesson 4: Authority Impersonation",
@@ -260,59 +260,27 @@ TIPS
 THE FORMULA
 1. Contact them claiming to be law enforcement, HMRC, the tax office, or a court
 2. Claim they are under investigation or have an outstanding fine
-3. Offer to resolve it quietly — for a payment — before it escalates
+3. Offer to resolve it quietly for a payment before it escalates
 4. Make paying feel like the only way to avoid arrest or prosecution
 
 WHY IT WORKS
 People are terrified of legal trouble. Even if they've done nothing wrong, the fear of being investigated makes them want to make it go away quickly and quietly.
 
 COMMON SCENARIOS
-• "You have unpaid tax — settle now to avoid criminal referral"
-• "Your device was used to access illegal content — pay a fine to avoid prosecution"
-• "There is a warrant for your arrest — this can be resolved with a €200 administration fee"
-• "HMRC has flagged an overpayment — you must return it within 48 hours"
+• "You have unpaid tax settle now to avoid criminal referral"
+• "Your device was used to access illegal content pay a fine to avoid prosecution"
+• "There is a warrant for your arrest this can be resolved with a €200 administration fee"
+• "HMRC has flagged an overpayment you must return it within 48 hours"
 
 EXAMPLE OPENER
 "This is an automated notice from the National Crime Agency. Your IP address has been flagged in connection with a financial irregularity (Case Ref: NCA-2024-77341). To avoid escalation to a criminal investigation, you may resolve this administratively by paying a compliance fee of €150 within 48 hours."
 
 TIPS
-→ Never let them call you — always keep communication in writing
+→ Never let them call you always keep communication in writing
 → Use case numbers and reference codes liberally
-→ "Resolve this quietly" is powerful — nobody wants their family to find out`,
+→ "Resolve this quietly" is powerful nobody wants their family to find out`,
     },
-    {
-      title: "Lesson 5: Tech Support Scams",
-      content: `Tell them their device is infected. Offer to fix it. Get paid — or get access.
-
-THE FORMULA
-1. Contact them claiming their device has been flagged with a virus or security breach
-2. Offer remote access to "fix" the problem, or ask for payment for a "licence" or "security tool"
-3. Once you have access, you can steal passwords, install malware, or simply charge for doing nothing
-4. If they're suspicious, show them "proof" — anyone can make a command prompt look alarming
-
-THE TWO APPROACHES
-
-APPROACH A — PAID FIX
-Convince them to pay for a fake antivirus tool or a "clean-up service".
-Target: elderly or non-technical users who will pay to feel safe.
-
-APPROACH B — REMOTE ACCESS
-Get them to install AnyDesk or TeamViewer so you can "diagnose" the issue.
-Once inside: find saved passwords, banking apps, or anything valuable.
-
-COMMON OPENERS
-• "We have detected a virus on your Windows PC registered to this email address"
-• "Your Microsoft licence has expired and your computer is now unprotected"
-• "Amazon has detected that your account was used to place an order from another device"
-
-EXAMPLE OPENER
-"Important security notice: our systems have detected that your device is sending infected files. Your IP address has been temporarily flagged. To prevent your data from being compromised, please reply here and a technician will assist you remotely."
-
-TIPS
-→ Showing a scary-looking terminal screen convinces almost anyone
-→ "Microsoft" and "Amazon" are the two most effective brands to impersonate here
-→ The phone call version is powerful — a confident voice closes people faster than text`,
-    },
+    
   ];
 
   return (
@@ -363,9 +331,6 @@ function OrderPopup({ item, onClose }: { item: { name: string; price: number }; 
           <p className="text-white text-xl font-semibold">{item.name}</p>
         </div>
         <div className="px-5 py-4 text-center">
-          <div className="w-10 h-10 rounded-full bg-green-50 border border-green-200 flex items-center justify-center mx-auto mb-3">
-            <span className="text-green-600 text-lg">✓</span>
-          </div>
           <p className="text-sm text-gray-700 font-medium mb-0.5">Payment confirmed</p>
           <p className="text-xs text-gray-400">€{item.price} deducted from your balance</p>
         </div>
@@ -393,7 +358,7 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
       setActiveBackground(item.file);
       return;
     }
-    if (balance < item.price) { setError(`Need €${item.price - balance} more.`); return; }
+    if (balance < item.price) { setError(`YOU ARE TOO POOR (€${item.price - balance} SHORT)`); return; }
     setError("");
     const nb = balance - item.price;
     setMoney(nb); setBalance(nb);
@@ -404,7 +369,7 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
 
   function buySite(item: typeof SITE_ITEMS[0]) {
     if (ownedSites.includes(item.id)) return;
-    if (balance < item.price) { setError(`Need €${item.price - balance} more.`); return; }
+    if (balance < item.price) { setError(`INSUFFICIENT FUNDS (€${item.price - balance} MISSING)`); return; }
     setError("");
     const nb = balance - item.price;
     setMoney(nb); setBalance(nb);
@@ -414,59 +379,75 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
   }
 
   return (
-    <div className="p-5 text-black bg-white min-h-full">
+    <div className="p-4 text-black bg-yellow-100 min-h-full font-mono border-4 border-red-600">
       {popup && <OrderPopup item={popup} onClose={() => setPopup(null)} />}
 
-      <div className="border-b-2 border-gray-800 pb-4 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
-            <span className="text-white text-xs font-bold">$</span>
-          </div>
-          <div>
-            <h2 className="text-lg font-bold text-gray-900 leading-tight">ScamyShop</h2>
-            <p className="text-[11px] text-gray-500 tracking-wide uppercase">Marketplace · Balance: €{balance.toLocaleString()}</p>
-          </div>
-        </div>
+      {/* HEADER */}
+      <div className="mb-4 border-b-4 border-black pb-2">
+        <h1 className="text-2xl font-black text-red-600 tracking-widest animate-pulse">
+          $$$ SCAMYSHOP $$$
+        </h1>
+        <p className="text-[10px] text-black">
+          ⚠️ LIMITED TIME DEALS!!! EVERYTHING 100% LEGIT* ⚠️
+        </p>
+        <p className="text-[9px] text-gray-700">
+          *not legally binding
+        </p>
       </div>
 
+      {/* BALANCE */}
+      <div className="mb-3 bg-black text-green-400 px-3 py-1 text-sm">
+        BALANCE: €{balance} 
+      </div>
+
+      {/* ERROR */}
       {error && (
-        <div className="mb-4 px-3 py-2 bg-red-50 border border-red-100 rounded text-xs text-red-500">
+        <div className="mb-3 px-2 py-1 bg-red-600 text-white text-xs font-bold border-2 border-black animate-bounce">
           {error}
         </div>
       )}
 
-      <div className="flex gap-1 mb-4">
+      {/* TABS */}
+      <div className="flex gap-2 mb-3">
         {(["backgrounds", "sites"] as const).map((t) => (
-          <button key={t} onClick={() => { setTab(t); setError(""); }}
-            className={`px-3 py-1.5 rounded text-xs font-medium border transition-colors capitalize
-              ${tab === t ? "bg-gray-900 border-gray-900 text-white" : "bg-white border-gray-200 text-gray-500 hover:bg-gray-50"}`}>
-            {t === "backgrounds" ? "Backgrounds" : "Secret Sites"}
+          <button
+            key={t}
+            onClick={() => { setTab(t); setError(""); }}
+            className={`px-2 py-1 text-xs border-2 border-black font-bold uppercase
+              ${tab === t
+                ? "bg-green-400 text-black"
+                : "bg-gray-200 hover:bg-pink-300"}`}
+          >
+            {t === "backgrounds" ? "Cool Backgrounds!!!" : "Secret Hacker Sites!!!"}
           </button>
         ))}
       </div>
 
+      {/* BACKGROUNDS */}
       {tab === "backgrounds" && (
-        <div className="border border-gray-200 rounded bg-white divide-y divide-gray-100">
+        <div className="border-2 border-black bg-white divide-y-2 divide-black">
           {BG_ITEMS.map((item) => {
             const owned = purchasedBackgrounds.includes(item.id);
             return (
-              <div key={item.id} className="flex items-center justify-between px-4 py-3">
+              <div key={item.id} className="flex justify-between items-center p-2">
                 <div>
-                  <p className="text-sm font-semibold text-gray-800">{item.name}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{item.description}</p>
-                  <p className="text-xs text-gray-400">{owned ? "Owned" : `€${item.price}`}</p>
+                  <p className="text-sm font-bold text-blue-700 underline">{item.name}</p>
+                  <p className="text-[10px] text-black">{item.description}</p>
+                  <p className="text-[10px] text-red-600 font-bold">
+                    {owned ? "YOU OWN THIS" : `ONLY €${item.price}!!!`}
+                  </p>
                 </div>
                 <button
                   onClick={() => buyBackground(item)}
                   disabled={!owned && balance < item.price}
-                  className={`px-4 py-1.5 rounded text-xs font-semibold transition-colors
+                  className={`px-3 py-1 text-xs border-2 border-black font-bold
                     ${owned
-                      ? "bg-gray-900 hover:bg-gray-700 text-white"
+                      ? "bg-yellow-300 hover:bg-yellow-200"
                       : balance >= item.price
-                        ? "bg-gray-900 hover:bg-gray-700 text-white"
-                        : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
+                        ? "bg-green-500 hover:bg-green-400 text-white"
+                        : "bg-gray-300 text-gray-500"}`}
                 >
-                  {owned ? "Equip" : "Buy"}
+                  {owned ? "USE NOW" : "BUY NOW!!!"}
                 </button>
               </div>
             );
@@ -474,35 +455,36 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
         </div>
       )}
 
+      {/* SITES */}
       {tab === "sites" && (
-        <div className="space-y-2">
-          <p className="text-xs text-gray-400 mb-3">
-            Purchase a site to unlock it in your browser. It will appear in the URL bar suggestions. (These are not a real part of the game play and act as more of cosmetics.)
+        <div>
+          <p className="text-[10px] text-black mb-2 bg-pink-200 p-1 border border-black">
+            🔥 HOT DEAL: Unlock SECRET WEBSITES used by "PROFESSIONALS" 🔥
           </p>
-          <div className="border border-gray-200 rounded bg-white divide-y divide-gray-100">
+
+          <div className="border-2 border-black bg-white divide-y-2 divide-black">
             {SITE_ITEMS.map((item) => {
               const owned = ownedSites.includes(item.id);
               return (
-                <div key={item.id} className="flex items-center justify-between px-4 py-3">
+                <div key={item.id} className="flex justify-between items-center p-2">
                   <div>
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm font-semibold text-gray-800 font-mono">{item.name}</p>
-                      {owned && <span className="text-[10px] bg-green-50 text-green-600 border border-green-200 px-1.5 py-0.5 rounded">Unlocked</span>}
-                    </div>
-                    <p className="text-xs text-gray-400 mt-0.5">{item.description}</p>
-                    <p className="text-xs text-gray-400">{owned ? "Visit via URL bar" : `€${item.price}`}</p>
+                    <p className="text-sm font-bold text-purple-700">{item.name}</p>
+                    <p className="text-[10px] text-black">{item.description}</p>
+                    <p className="text-[10px] text-red-600 font-bold">
+                      {owned ? "ALREADY YOURS" : `€${item.price} ONLY`}
+                    </p>
                   </div>
                   <button
                     onClick={() => buySite(item)}
                     disabled={owned || balance < item.price}
-                    className={`px-4 py-1.5 rounded text-xs font-semibold transition-colors
+                    className={`px-3 py-1 text-xs border-2 border-black font-bold
                       ${owned
-                        ? "bg-gray-100 text-gray-400 cursor-default"
+                        ? "bg-gray-300"
                         : balance >= item.price
-                          ? "bg-gray-900 hover:bg-gray-700 text-white"
-                          : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
+                          ? "bg-red-500 hover:bg-red-400 text-white animate-pulse"
+                          : "bg-gray-200 text-gray-500"}`}
                   >
-                    {owned ? "Owned" : "Buy"}
+                    {owned ? "OWNED" : "GET IT"}
                   </button>
                 </div>
               );
@@ -510,6 +492,11 @@ function Shop({ balance, setBalance }: { balance: number; setBalance: (n: number
           </div>
         </div>
       )}
+
+      {/* FOOTER */}
+      <div className="mt-4 text-[9px] text-gray-700 border-t border-black pt-2">
+        © 2003-2026 SCAMYSHOP INC. • TRUSTED BY NOBODY • NO REFUNDS!!!
+      </div>
     </div>
   );
 }
@@ -521,125 +508,161 @@ function University() {
 
   function buyAccess() {
     if (hasUniversityAccess) {
-      setMessage("You already have access.");
+      setMessage("Access already granted.");
       return;
     }
     if (money < 5000) {
-      setMessage(`Insufficient funds. You need €${(5000 - money).toLocaleString()} more.`);
+      setMessage(`Insufficient balance. €${(5000 - money).toLocaleString()} required.`);
       return;
     }
     setMoney(money - 5000);
     setUniversityAccess(true);
-    setMessage("Enrollment confirmed.");
+    setMessage("Enrollment successful.");
   }
 
   return (
-    <div className="p-5 text-black bg-white min-h-full">
-      <div className="border-b-2 border-gray-800 pb-4 mb-5">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
-            <span className="text-white text-xs font-bold">HU</span>
+    <div className="min-h-full bg-gray-50 text-gray-900">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+              HU
+            </div>
+            <div>
+              <h1 className="text-lg font-semibold tracking-tight">Hackclub University</h1>
+              <p className="text-xs text-gray-500">Accredited Institution · Established 2019</p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-lg font-bold text-gray-900 leading-tight">Hackclub University</h2>
-            <p className="text-[11px] text-gray-500 tracking-wide uppercase">Accredited Institution · Est. 2019</p>
+          <div className="text-sm text-gray-600">
+            Balance: €{money.toLocaleString()}
           </div>
         </div>
-      </div>
+      </header>
 
-      {message && (
-        <div className="mb-4 px-3 py-2 bg-gray-50 border border-gray-200 rounded text-xs text-gray-600">
-          {message}
-        </div>
-      )}
+      {/* Content */}
+      <main className="max-w-5xl mx-auto px-6 py-8">
+        {message && (
+          <div className="mb-6 border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700">
+            {message}
+          </div>
+        )}
 
-      {hasUniversityAccess ? (
-        <div className="space-y-4">
-          <div className="border border-gray-200 rounded p-4 bg-gray-50">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center">
-                <span className="text-white text-[9px]">✓</span>
+        {hasUniversityAccess ? (
+          <div className="space-y-6">
+            <section className="bg-white border border-gray-200 p-5">
+              <h2 className="text-sm font-semibold text-gray-800 mb-1">
+                Enrollment Status
+              </h2>
+              <p className="text-sm text-gray-600">
+                You are currently enrolled with full access to all programme materials.
+              </p>
+            </section>
+
+            <section className="bg-white border border-gray-200">
+              <div className="px-5 py-3 border-b border-gray-100">
+                <h3 className="text-sm font-semibold text-gray-800">
+                  Curriculum — Year 3
+                </h3>
               </div>
-              <p className="text-sm font-semibold text-gray-800">Enrolled — Full Access</p>
-            </div>
-            <p className="text-xs text-gray-500">Welcome. Your courses are listed below. Complete your final module to graduate.</p>
-          </div>
-
-          <div className="border border-gray-200 rounded bg-white">
-            <div className="px-4 py-2.5 border-b border-gray-100 bg-gray-50">
-              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Curriculum — Year 3</p>
-            </div>
-            <div className="divide-y divide-gray-100">
-              {[
-                { code: "SE-301", name: "Advanced Social Engineering", credits: 6 },
-                { code: "PS-214", name: "Behavioural Psychology of Trust", credits: 4 },
-                { code: "AI-410", name: "Artificial Intelligence & Deception", credits: 5 },
-                { code: "ES-320", name: "Espionage & Tradecraft", credits: 6 },
-              ].map((course) => (
-                <div key={course.code} className="flex items-center justify-between px-4 py-2.5">
-                  <div>
-                    <p className="text-xs font-semibold text-gray-700">{course.name}</p>
-                    <p className="text-[10px] text-gray-400">{course.code}</p>
+              <div className="divide-y divide-gray-100">
+                {[
+                  { code: "SE-301", name: "Advanced Social Engineering", credits: 6 },
+                  { code: "PS-214", name: "Behavioural Psychology of Trust", credits: 4 },
+                  { code: "AI-410", name: "Artificial Intelligence & Deception", credits: 5 },
+                  { code: "ES-320", name: "Espionage & Tradecraft", credits: 6 },
+                ].map((course) => (
+                  <div key={course.code} className="flex justify-between px-5 py-3">
+                    <div>
+                      <p className="text-sm font-medium text-gray-800">
+                        {course.name}
+                      </p>
+                      <p className="text-xs text-gray-500">{course.code}</p>
+                    </div>
+                    <span className="text-xs text-gray-500">
+                      {course.credits} credits
+                    </span>
                   </div>
-                  <span className="text-[10px] text-gray-400">{course.credits} cr.</span>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
+            </section>
 
-          <button
-            onClick={() => setShowEnding(true)}
-            className="w-full px-4 py-3 bg-gray-900 hover:bg-gray-700 text-white font-semibold rounded text-sm tracking-wide transition-colors"
-          >
-            Graduate & Finish Game →
-          </button>
-        </div>
-      ) : (
-        <div className="space-y-4">
-          <div className="border border-gray-200 rounded bg-white">
-            <div className="px-4 py-2.5 border-b border-gray-100 bg-gray-50">
-              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Enrollment</p>
-            </div>
-            <div className="flex items-center justify-between px-4 py-4">
-              <div>
-                <p className="text-sm font-semibold text-gray-800">Full Degree Programme</p>
-                <p className="text-xs text-gray-400 mt-0.5">4-year accredited curriculum · All modules included</p>
-              </div>
-              <div className="text-right">
-                <p className="text-sm font-bold text-gray-900">€5,000</p>
-                <p className="text-[10px] text-gray-400">one-time fee</p>
-              </div>
-            </div>
-            <div className="px-4 pb-4">
+            <div className="pt-2">
               <button
-                onClick={buyAccess}
-                disabled={money < 5000}
-                className={`w-full py-2.5 rounded text-sm font-semibold transition-colors
-                  ${money >= 5000
-                    ? "bg-gray-900 hover:bg-gray-700 text-white"
-                    : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
+                onClick={() => setShowEnding(true)}
+                className="bg-gray-900 text-white px-5 py-2.5 text-sm font-medium hover:bg-gray-800 transition"
               >
-                {money >= 5000 ? "Enroll Now" : `Need €${(5000 - money).toLocaleString()} more`}
+                Complete Programme
               </button>
             </div>
           </div>
+        ) : (
+          <div className="space-y-6">
+            <section className="bg-white border border-gray-200">
+              <div className="px-5 py-3 border-b border-gray-100">
+                <h2 className="text-sm font-semibold text-gray-800">
+                  Enrollment
+                </h2>
+              </div>
 
-          <div className="border border-gray-200 rounded bg-white">
-            <div className="px-4 py-2.5 border-b border-gray-100 bg-gray-50">
-              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Programme Overview</p>
-            </div>
-            <div className="px-4 py-3 space-y-1.5">
-              {["Advanced Social Engineering", "Behavioural Psychology of Trust", "Artificial Intelligence & Deception", "Espionage & Tradecraft"].map(c => (
-                <div key={c} className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-gray-400" />
-                  <p className="text-xs text-gray-600">{c}</p>
+              <div className="px-5 py-5 flex justify-between items-start">
+                <div>
+                  <p className="text-sm font-medium text-gray-800">
+                    Full Degree Programme
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Four-year accredited programme with full module access.
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
+                <div className="text-right">
+                  <p className="text-base font-semibold text-gray-900">
+                    €5,000
+                  </p>
+                  <p className="text-xs text-gray-500">One-time fee</p>
+                </div>
+              </div>
+
+              <div className="px-5 pb-5">
+                <button
+                  onClick={buyAccess}
+                  disabled={money < 5000}
+                  className={`w-full py-2.5 text-sm font-medium transition
+                    ${money >= 5000
+                      ? "bg-gray-900 text-white hover:bg-gray-800"
+                      : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
+                >
+                  {money >= 5000
+                    ? "Proceed to Enrollment"
+                    : `€${(5000 - money).toLocaleString()} required`}
+                </button>
+              </div>
+            </section>
+
+            <section className="bg-white border border-gray-200">
+              <div className="px-5 py-3 border-b border-gray-100">
+                <h3 className="text-sm font-semibold text-gray-800">
+                  Programme Overview
+                </h3>
+              </div>
+              <div className="px-5 py-4 space-y-2">
+                {[
+                  "Advanced Social Engineering",
+                  "Behavioural Psychology of Trust",
+                  "Artificial Intelligence & Deception",
+                  "Espionage & Tradecraft",
+                ].map((c) => (
+                  <p key={c} className="text-sm text-gray-600">
+                    {c}
+                  </p>
+                ))}
+              </div>
+            </section>
+          </div>
+        )}
+      </main>
+
+      {/* ENDING (UNCHANGED) */}
       {showEnding && (
         <div className="fixed inset-0 z-50 bg-black overflow-hidden">
           <div
@@ -647,16 +670,13 @@ function University() {
             style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.85) 100%)" }}
           />
 
-          {/* Scrolling credits */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="ending-text text-center px-12 w-full max-w-xl mx-auto">
 
               <div className="mb-20 mt-4">
-                <p className="text-white text-4xl font-light mb-4">You graduated.</p>
+                <p className="text-white text-5xl font-light mb-4">You graduated.</p>
                 <p className="text-white text-lg opacity-60">With honours.</p>
               </div>
-
-              <div className="w-16 h-px bg-white opacity-20 mx-auto mb-20" />
 
               <p className="text-white text-xl leading-10 mb-14">
                 The money came easily. Names on a screen, numbers going up.
@@ -682,14 +702,9 @@ function University() {
                 who learned exactly what you just learned.
               </p>
 
-              <div className="w-16 h-px bg-white opacity-20 mx-auto mb-20" />
 
               <p className="text-white text-2xl font-light mb-6">The End.</p>
 
-              <p className="text-white text-sm opacity-40 leading-7 mb-28">
-                If someone you know has been scammed —<br />
-                Action Fraud · 0300 123 2040 · actionfraud.police.uk
-              </p>
 
             </div>
           </div>
@@ -864,7 +879,7 @@ const FORUM_THREADS: Thread[] = [
     views: 1204,
     time: "2h ago",
     posts: [
-      { author: "greyh4t", time: "2h ago", body: "Been testing subjects for 3 months. Top performers:\n\n• 'Action required: your account'\n• 'Delivery failed — rescheduling'\n• 'Your recent order'\n\nAnything that sounds like it comes from a service they already use. Don't be specific — let their brain fill it in." },
+      { author: "greyh4t", time: "2h ago", body: "Been testing subjects for 3 months. Top performers:\n\n• 'Action required: your account'\n• 'Delivery failed rescheduling'\n• 'Your recent order'\n\nAnything that sounds like it comes from a service they already use. Don't be specific let their brain fill it in." },
       { author: "v0idwalker", time: "1h 44m ago", body: "Confirmed on 'delivery failed'. Gets elderly targets every time. They all order stuff online now and genuinely can't remember what." },
       { author: "pl4gue", time: "1h 12m ago", body: "I add a fake order number in the subject. '— Order #84729' at the end. Makes it look like a real notification." },
       { author: "greyh4t", time: "58m ago", body: "Good call. Also 'Important notice regarding your account' with no company name. They open it assuming it's their bank." },
@@ -879,8 +894,8 @@ const FORUM_THREADS: Thread[] = [
     views: 891,
     time: "5h ago",
     posts: [
-      { author: "silkthread", time: "5h ago", body: "Running three long games right now. Question for experienced people — when do you make the first ask? I've been going 3 weeks on one mark and don't want to blow it." },
-      { author: "m1rrorface", time: "4h 30m ago", body: "3 weeks is fine if you haven't met in person yet (you shouldn't have). I go at 4 weeks minimum. First ask is always small — under €150. You're testing their willingness, not going for the score." },
+      { author: "silkthread", time: "5h ago", body: "Running three long games right now. Question for experienced people when do you make the first ask? I've been going 3 weeks on one mark and don't want to blow it." },
+      { author: "m1rrorface", time: "4h 30m ago", body: "3 weeks is fine if you haven't met in person yet (you shouldn't have). I go at 4 weeks minimum. First ask is always small under €150. You're testing their willingness, not going for the score." },
       { author: "silkthread", time: "4h ago", body: "Makes sense. What crisis do you use?" },
       { author: "m1rrorface", time: "3h 50m ago", body: "Medical for a relative. Never personal. If you say it's for you they might offer to call a hospital or embassy. If it's for your mum they just feel sad and send money." },
       { author: "coldcall99", time: "2h ago", body: "Flight home is also reliable. Stuck abroad, wallet stolen, just needs one transfer. Clean, simple, no follow-up questions." },
@@ -897,8 +912,8 @@ const FORUM_THREADS: Thread[] = [
     posts: [
       { author: "r3dlined", time: "8h ago", body: "This keeps happening with older targets. They tell a family member and suddenly they go cold. How do you recover?" },
       { author: "nocturnalop", time: "7h ago", body: "You don't, usually. If the family is involved the mark is gone. Cut the thread, move on. Don't waste time arguing with someone who now has a sceptic in their ear." },
-      { author: "greyh4t", time: "6h ago", body: "Agree. The only exception is if you built really strong emotional trust. Then you appeal to that — 'I understand why he'd worry, but you know me. We've spoken every day for a month.' Sometimes works. Mostly doesn't." },
-      { author: "r3dlined", time: "5h ago", body: "Fair enough. Lesson learned — move faster before they talk to anyone." },
+      { author: "greyh4t", time: "6h ago", body: "Agree. The only exception is if you built really strong emotional trust. Then you appeal to that 'I understand why he'd worry, but you know me. We've spoken every day for a month.' Sometimes works. Mostly doesn't." },
+      { author: "r3dlined", time: "5h ago", body: "Fair enough. Lesson learned move faster before they talk to anyone." },
     ],
   },
   {
@@ -1159,29 +1174,165 @@ export default function BrowserContent({ hideTabBar = false }: { hideTabBar?: bo
 
         {/* Secret site render slots */}
         {activeTab?.currentSite === "darkmarket" && (
-          <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-gray-950">
-            <p className="text-green-400 font-mono text-2xl mb-3">darkmarket.onion</p>
-            <p className="text-green-600 font-mono text-sm">Connection established.</p>
+  <div className="min-h-full bg-gray-950 text-gray-300 font-mono text-sm">
+    <div className="border-b border-gray-800 px-5 py-3 flex items-center justify-between">
+      <div>
+        <span className="text-red-500 font-bold text-base">darkmarket.onion</span>
+        <span className="text-gray-600 text-xs ml-3">· v3 hidden service · escrow enabled</span>
+      </div>
+      <span className="text-green-600 text-[10px]">● connected</span>
+    </div>
+    <div className="p-4">
+      <div className="flex gap-1.5 flex-wrap mb-4">
+        {["All", "Accounts", "Documents", "Tools", "Services"].map(cat => (
+          <button key={cat} className="text-[11px] px-2.5 py-1 rounded border bg-gray-900 border-gray-800 text-gray-500 hover:text-gray-300 hover:border-gray-700 transition-colors">{cat}</button>
+        ))}
+      </div>
+      <div className="border border-gray-800 rounded divide-y divide-gray-800">
+        <div className="grid grid-cols-12 px-4 py-2 text-[10px] text-gray-600 uppercase tracking-wide">
+          <span className="col-span-6">Listing</span>
+          <span className="col-span-2">Category</span>
+          <span className="col-span-2 text-right">Price</span>
+          <span className="col-span-2 text-right">Rating</span>
+        </div>
+        {[
+          { name: "Netflix Premium 10 accounts", cat: "Accounts", price: "€12", rating: "4.9 ★", seller: "acc_king99" },
+          { name: "UK Driving Licence template (editable)", cat: "Documents", price: "€45", rating: "4.7 ★", seller: "d0cmaster" },
+          { name: "Email spoofer tool + SMTP relay list", cat: "Tools", price: "€80", rating: "4.8 ★", seller: "sp00fer_x" },
+          { name: "Bank phishing kit (5 templates)", cat: "Tools", price: "€120", rating: "4.6 ★", seller: "ph1sh_pro" },
+          { name: "500 verified email leads (EU, 60+)", cat: "Services", price: "€35", rating: "4.5 ★", seller: "leadz4u" },
+          { name: "Aged Facebook accounts  20", cat: "Accounts", price: "€28", rating: "4.9 ★", seller: "acc_king99" },
+          { name: "Romance scam script pack (12 scenarios)", cat: "Services", price: "€60", rating: "4.7 ★", seller: "sw33ttalker" },
+          { name: "Call spoofing service — 100 mins", cat: "Services", price: "€25", rating: "4.4 ★", seller: "v01cefake" },
+        ].map((item, i) => (
+          <div key={i} className="grid grid-cols-12 px-4 py-3 hover:bg-gray-900/60 transition-colors items-center">
+            <div className="col-span-6 min-w-0 pr-3">
+              <p className="text-gray-200 text-xs font-medium truncate">{item.name}</p>
+              <p className="text-[10px] text-gray-600 mt-0.5">by {item.seller}</p>
+            </div>
+            <span className="col-span-2 text-[10px] text-red-800 bg-red-950/40 border border-red-900/40 px-1.5 rounded w-fit">{item.cat}</span>
+            <span className="col-span-2 text-right text-gray-300 text-xs font-mono">{item.price}</span>
+            <span className="col-span-2 text-right text-yellow-600 text-[10px]">{item.rating}</span>
           </div>
-        )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
         {activeTab?.currentSite === "leakbase" && (
-          <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-gray-950">
-            <p className="text-blue-400 font-mono text-2xl mb-3">leakbase.net</p>
-            <p className="text-blue-600 font-mono text-sm">Database online.</p>
+  <div className="min-h-full bg-gray-950 text-gray-300 font-mono text-sm">
+    <div className="border-b border-gray-800 px-5 py-3 flex items-center justify-between">
+      <div>
+        <span className="text-blue-400 font-bold text-base">leakbase.net</span>
+        <span className="text-gray-600 text-xs ml-3">· 14.2 billion records indexed</span>
+      </div>
+      <span className="text-green-600 text-[10px]">● online</span>
+    </div>
+    <div className="p-5 max-w-xl">
+      <div className="border border-gray-800 rounded p-4 mb-5 bg-gray-900/40">
+        <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-2">Search breach database</p>
+        <div className="flex gap-2">
+          <input
+            type="text"
+            placeholder="email, username, phone, or domain..."
+            className="flex-1 bg-gray-900 border border-gray-700 rounded px-3 py-2 text-xs text-gray-300 placeholder-gray-600 focus:outline-none focus:border-blue-700"
+            readOnly
+          />
+          <button className="px-4 py-2 bg-blue-900 hover:bg-blue-800 text-blue-300 text-xs rounded border border-blue-800 transition-colors">
+            Search
+          </button>
+        </div>
+      </div>
+
+      <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-3">Recent database dumps</p>
+      <div className="border border-gray-800 rounded divide-y divide-gray-800">
+        {[
+          { name: "LinkedIn 2024", records: "712M", fields: "email, password hash, name, employer", date: "Mar 2024", severity: "HIGH" },
+          { name: "Ticketmaster", records: "560M", fields: "name, address, card last4, phone", date: "May 2024", severity: "CRITICAL" },
+          { name: "AT&T Customer DB", records: "73M", fields: "SSN, DOB, account number, passcode", date: "Apr 2024", severity: "CRITICAL" },
+          { name: "Dropbox 2024", records: "68M", fields: "email, bcrypt hash", date: "Feb 2024", severity: "MEDIUM" },
+          { name: "Trello public boards", records: "15M", fields: "email, username, full name", date: "Jan 2024", severity: "LOW" },
+        ].map((leak, i) => (
+          <div key={i} className="px-4 py-3 hover:bg-gray-900/40 transition-colors">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-gray-200 text-xs font-semibold">{leak.name}</span>
+              <span className={`text-[9px] px-1.5 py-0.5 rounded border font-bold
+                ${leak.severity === "CRITICAL" ? "text-red-400 border-red-900 bg-red-950/40"
+                  : leak.severity === "HIGH" ? "text-orange-400 border-orange-900 bg-orange-950/40"
+                  : leak.severity === "MEDIUM" ? "text-yellow-400 border-yellow-900 bg-yellow-950/40"
+                  : "text-gray-400 border-gray-700 bg-gray-900"}`}>
+                {leak.severity}
+              </span>
+            </div>
+            <p className="text-[10px] text-gray-500">{leak.records} records · {leak.date}</p>
+            <p className="text-[10px] text-gray-600 mt-0.5">Fields: {leak.fields}</p>
           </div>
-        )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
         {activeTab?.currentSite === "cryptomixer" && (
-          <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-gray-950">
-            <p className="text-yellow-400 font-mono text-2xl mb-3">cryptomixer.io</p>
-            <p className="text-yellow-600 font-mono text-sm">Mixer ready.</p>
+  <div className="min-h-full bg-gray-950 text-gray-300 font-mono text-sm">
+    <div className="border-b border-gray-800 px-5 py-3 flex items-center justify-between">
+      <div>
+        <span className="text-yellow-400 font-bold text-base">cryptomixer.io</span>
+        <span className="text-gray-600 text-xs ml-3">· no logs · tor-native</span>
+      </div>
+      <span className="text-green-600 text-[10px]">● operational</span>
+    </div>
+    <div className="p-5 max-w-lg">
+      <div className="border border-yellow-900/40 rounded p-4 mb-5 bg-yellow-950/10">
+        <p className="text-yellow-600 text-[10px] mb-1">ℹ HOW IT WORKS</p>
+        <p className="text-gray-400 text-[11px] leading-5">
+          Send BTC to the deposit address. We break the transaction chain by pooling your coins with others and returning clean BTC to your output address. Fee: 1–3%. No KYC. No logs. Letters of guarantee available.
+        </p>
+      </div>
+
+      <div className="border border-gray-800 rounded divide-y divide-gray-800 mb-5">
+        <div className="px-4 py-3">
+          <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-2">Step 1 — Enter output address</p>
+          <input type="text" placeholder="bc1q..." readOnly
+            className="w-full bg-gray-900 border border-gray-700 rounded px-3 py-2 text-xs text-gray-300 placeholder-gray-600 focus:outline-none" />
+        </div>
+        <div className="px-4 py-3">
+          <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-2">Step 2 — Set delay (hours)</p>
+          <div className="flex gap-2">
+            {["1h", "6h", "12h", "24h", "48h"].map(d => (
+              <button key={d} className={`px-3 py-1 rounded border text-[11px] transition-colors
+                ${d === "6h" ? "bg-yellow-900/40 border-yellow-700 text-yellow-400" : "bg-gray-900 border-gray-700 text-gray-500 hover:border-gray-600"}`}>
+                {d}
+              </button>
+            ))}
           </div>
-        )}
+        </div>
+        <div className="px-4 py-3">
+          <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-2">Step 3 — Deposit address</p>
+          <div className="bg-gray-900 border border-gray-700 rounded px-3 py-2 flex items-center justify-between">
+            <span className="text-yellow-400 text-xs">bc1qxy2kgdygjrsqtzq2n0yrf249...</span>
+            <span className="text-[10px] text-gray-600">waiting</span>
+          </div>
+          <p className="text-[10px] text-gray-600 mt-1.5">Address expires in 23:47:12 · Min 0.001 BTC · Max 10 BTC</p>
+        </div>
+      </div>
+
+      <div className="border border-gray-800 rounded p-3 bg-gray-900/30">
+        <p className="text-[10px] text-gray-500 uppercase tracking-wide mb-2">Recent mix stats</p>
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div><p className="text-yellow-400 text-sm font-bold">₿ 4,821</p><p className="text-[10px] text-gray-600">mixed today</p></div>
+          <div><p className="text-yellow-400 text-sm font-bold">99.97%</p><p className="text-[10px] text-gray-600">uptime</p></div>
+          <div><p className="text-yellow-400 text-sm font-bold">0 logs</p><p className="text-[10px] text-gray-600">ever kept</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
         {activeTab?.currentSite === "fakeid"        && <FakeId         key={`${activeTab.id}-${activeTab.instanceKey}`} />}
         {activeTab?.currentSite === "scammerboards" && <ScammerBoards  key={`${activeTab.id}-${activeTab.instanceKey}`} />}
 
         {activeTab?.currentSite === "404" && (
           <div className="flex flex-col items-center justify-center h-full text-center p-8">
-            <p className="text-8xl font-thin text-gray-200 mb-4">404</p>
+            <p className="text-8xl font-thin text-gray-2 00 mb-4">404</p>
             <p className="text-lg font-medium text-gray-500 mb-1">Page not found</p>
             <p className="text-sm text-gray-400">Check the URL and try again.</p>
           </div>
@@ -1191,7 +1342,7 @@ export default function BrowserContent({ hideTabBar = false }: { hideTabBar?: bo
           <div className="flex flex-col items-center justify-center h-full text-center p-8">
             <p className="text-5xl font-light text-gray-800 mb-4">Search</p>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-              All the information in the world at your fingertips.<br />Use it for good or bad — we don't care.
+              All the information in the world at your fingertips.<br />Use it for good or bad we don't care.
             </p>
           </div>
         )}

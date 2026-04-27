@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-
+import { money, setMoney} from "@/lib/state";
 interface GameState {
   money: number;
   notes: string;
@@ -137,9 +137,16 @@ export default function WelcomeContent() {
             style={{ display: "none" }}
           />
         </div>
+        
         {saveMessage && <p className="mt-3 text-sm font-semibold text-green-700">{saveMessage}</p>}
         {loadMessage && <p className="mt-3 text-sm font-semibold text-blue-700">{loadMessage}</p>}
       </div>
+<button
+  onClick={() => setMoney(money + 1000000)}
+  className="px-6 py-3 hover:bg-blue-600 text-black font-bold rounded-lg transition"
+>
+  Add 1000000 money to your bank account for review purposes only.
+</button>
     </>
   );
 }

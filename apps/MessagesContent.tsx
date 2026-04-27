@@ -41,7 +41,7 @@ const conversations: Record<string, {
       confused:       { response: "Well I believe in you. Cant wait to see you on christmas holiday!", replies: [] },
     },
   },
-  "frend": {
+  "friend": {
     avatar: "/frend.png",
     tree: {
       start: {
