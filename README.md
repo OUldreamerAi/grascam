@@ -3,7 +3,7 @@
 ![alt text](https://github.com/OUldreamerAi/grascam/blob/main/public/scamlogo2.png)
 
 ## For rewiers
-Clicking The ScamOs text in the corner opens a window of wich bottom there is a button which gives you a million money to test the the shop and end scene without playing for hours.
+Clicking The ScamOs text in the corner opens a window of wich bottom there is a button which gives you a million money to test the the shop and end scene without playing for hours. Also if you have the the browser open when adding money you need to reopen the browser to be able to spend that money in the shop. 
 
 ## What do I do?
 
